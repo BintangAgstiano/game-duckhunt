@@ -1,0 +1,518 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Press+Start+2P&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+canvas {
+    background-image: url(Background.png);
+    background-position-x: -130px;
+    background-size: cover;
+    cursor: none;
+}
+
+.content {
+    position: relative;
+    width: max-content;
+    height: max-content;
+}
+
+.col-healt {
+    width: 100px;
+    height: 50px;
+    background-color: black;
+    border-radius: 10px;
+    border: 3px solid #C07000;
+    position: absolute;
+    bottom: 20px;
+    left: 30px;
+    color: white;
+    font-family: "Press Start 2P";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.col-name {
+    width: 200px;
+    height: 50px;
+    background-color: black;
+    border-radius: 10px;
+    border: 3px solid #C07000;
+    position: absolute;
+    bottom: 20px;
+    left: 200px;
+    color: white;
+    font-family: "Press Start 2P";
+    font-size: .6rem;
+    padding: 0 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.healt {
+    font-size: .8rem;
+}
+
+.col-healt-img {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    height: 20px;
+    width: 100%;
+    padding-left: 5px;
+}
+
+.col-difficulty {
+    font-size: .5rem
+}
+
+.col-score {
+    width: 200px;
+    height: 50px;
+    background-color: black;
+    border-radius: 10px;
+    border: 3px solid #C07000;
+    position: absolute;
+    bottom: 20px;
+    right: 30px;
+    color: white;
+    font-family: "Press Start 2P";
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    padding: 0 15px;
+    justify-content: center;
+}
+
+.popup-screen {
+    width: 700px;
+    height: 500px;
+    background-image: url(Background.png);
+    background-position-x: -130px;
+    background-size: cover;
+    position: absolute;
+    z-index: 999;
+    overflow: hidden;
+    display: flex;
+}
+
+.logo {
+    position: absolute;
+    left: 140px;
+    top: 30px;
+}
+
+.papan {
+    position: absolute;
+    right: 30px;
+    bottom: -20px;
+    width: 280px;
+}
+
+.col-input-name {
+    width: 230px;
+    height: 40px;
+    position: absolute;
+    right: 60px;
+    bottom: 285px;
+    z-index: 20;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#input-name {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    width: 55%;
+    font-size: 1.1rem;
+    color: white;
+    font-family: "Press Start 2P";
+}
+
+.select-mode {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    width: 55%;
+    font-size: 1.1rem;
+    color: white;
+    font-family: "Press Start 2P";
+    cursor: pointer;
+}
+
+#input-name::placeholder {
+    color: white;
+}
+
+.col-input-mode {
+    width: 230px;
+    height: 40px;
+    position: absolute;
+    right: 60px;
+    bottom: 245px;
+    z-index: 20;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Press Start 2P";
+    color: white;
+    cursor: pointer;
+}
+
+.col-input-leadeboard {
+    width: 230px;
+    height: 38px;
+    position: absolute;
+    right: 60px;
+    bottom: 212px;
+    z-index: 20;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Press Start 2P";
+    color: white;
+    cursor: pointer;
+}
+
+.col-input-play {
+    width: 230px;
+    height: 35px;
+    position: absolute;
+    right: 60px;
+    bottom: 177px;
+    z-index: 20;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Press Start 2P";
+    color: white;
+    cursor: pointer;
+}
+
+.anjing {
+    position: absolute;
+    bottom: 30px;
+    right: 0;
+    animation: anjingGerak 30s infinite;
+}
+
+@keyframes anjingGerak {
+    0% {
+        right: 0;
+    }
+
+    100% {
+        right: 700px;
+    }
+}
+
+.duck {
+    position: absolute;
+    top: 100px;
+    left: -20px;
+    animation: duckGerak 30s infinite;
+}
+
+@keyframes duckGerak {
+    0% {
+        left: 0;
+    }
+
+    100% {
+        left: 700px;
+    }
+}
+
+.popup-gameover {
+    width: 700px;
+    height: 500px;
+    background-image: url(Background.png);
+    background-position-x: -130px;
+    background-size: cover;
+    position: absolute;
+    z-index: 999;
+    overflow: hidden;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.img-gameover {
+    position: absolute;
+    right: 100px;
+    top: 60px;
+}
+
+.healt-kosong {
+    position: absolute;
+    right: 105px;
+    top: 140px;
+    color: white;
+    display: flex;
+    font-family: "Press Start 2P";
+}
+
+.col-score-gameover {
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    position: absolute;
+    right: 310px;
+    top: 130px;
+    color: white;
+    font-family: "Press Start 2P";
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 0 15px;
+    justify-content: center;
+}
+
+.back-to-menu {
+    position: absolute;
+    top: 210px;
+    width: max-content;
+    color: white;
+    right: 210px;
+    font-family: "Press Start 2P";
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    gap: 10px;
+}
+#back-to-menu {
+    position: absolute;
+    top: 210px;
+    width: max-content;
+    color: white;
+    right: 255px;
+    font-family: "Press Start 2P";
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    gap: 10px;
+}
+
+.back-to-menu:hover .cursor {
+    display: flex
+}
+
+.retry {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    display: flex;
+    top: 250px;
+    color: white;
+    right: 265px;
+    font-family: "Press Start 2P";
+}
+#retry {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    display: flex;
+    top: 250px;
+    color: white;
+    right: 310px;
+    margin-top: 10px;
+    font-family: "Press Start 2P";
+}
+
+.retry:hover .cursor {
+    display: flex;
+}
+#continue {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    display: flex;
+    top: 300px;
+    color: white;
+    right: 290px;
+    margin-top: 10px;
+    font-family: "Press Start 2P";
+}
+.continue .cursor{
+    display: none;
+}
+.continue:hover .cursor {
+    display: flex;
+}
+
+.back-to-menu .cursor {
+    display: none;
+    margin-top: -4px;
+}
+
+.retry .cursor {
+    margin-top: -4px;
+    display: none;
+}
+
+.popup-leadeboard {
+    width: 700px;
+    height: 500px;
+    background-color: #3B748F;
+    background-position-x: -130px;
+    background-size: cover;
+    position: absolute;
+    z-index: 9999;
+    overflow: hidden;
+    padding: 10px;
+    display: none;
+    flex-direction: column;
+}
+
+.header-leadeboard {
+    width: 100%;
+    height: 20%;
+}
+
+.footer-leadeboard {
+    width: 100%;
+    height: 80%;
+    background-color: #F1DAB8;
+    display: flex;
+    align-items:center;
+    flex-direction: column;
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+
+.top {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 2rem;
+    font-family: "Press Start 2P";
+    padding-top: 10px;
+}
+
+.bottom {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    gap: 10px;
+}
+
+.bottom div {
+    background-color: #3593AF;
+    width: 100px;
+    color: white;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: poppins;
+    border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        cursor: pointer;
+}
+
+.bottom div.active {
+    background-color: #F1DAB8;
+    color: black;
+
+}
+.line-board{
+    width: 90%;
+    height: 40px;
+    background-color: #E9D2B2;
+ display: flex;
+ align-items: center;
+ padding: 0 10px;
+    margin-top: 20px;
+    gap: 10px;
+    position: relative;
+}
+.col-number{
+    width: 30px;
+    height: 30px;
+    background-color: #DCAE52;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.col-piala{
+    width: 100px;
+    height: max-content;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    right: 30px;
+}
+.close{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+.popup-pause {
+    width: 700px;
+    height: 500px;
+   background-color: rgba(0, 0, 0, 0.763);
+    position: absolute;
+    z-index: 99999;
+    overflow: hidden;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.title-pause{
+    color: white;
+    font-family: "Press Start 2P";
+    font-size: 3rem;
+    position: absolute;
+    top: 100px;
+}
+.col-sound{
+    width: max-content;
+    height: max-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 20px;
+    cursor: pointer;
+    right: 20px;
+}
+.line-sound{
+    width: 3px;
+    height: 50px;
+    background-color: white;
+    position: absolute;
+ transition: .3s;
+    rotate: 45deg;
+}

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duck Hant</title>
+    <link rel="shortcut icon" href="duckhunt_various_sheet_cr-removebg-preview.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="content">
+
+            <div class="popup-pause">
+                <div class="title-pause">Game Pause</div>
+                <div class="back-to-menu" id="back-to-menu"><img class="cursor" src="cursor.png" width="20" alt=""> Back
+                    to menu</div>
+                <div class="retry" id="retry"> <img class="cursor" src="cursor.png" width="20" alt=""> Retry</div>
+                <div class="continue" id="continue"> <img class="cursor" src="cursor.png" width="20" alt=""> Continue
+                </div>
+
+            </div>
+
+            <div class="popup-leadeboard">
+                <div class="header-leadeboard">
+                    <img src="close.png" class="close" alt="">
+                    <div class="top">
+                        LEADEBOARD
+                    </div>
+                    <div class="bottom">
+                        <div class="active" data-name="easy">EASY</div>
+                        <div data-name="medium">MEDIUM</div>
+                        <div data-name="hard">HARD</div>
+                    </div>
+                </div>
+                <div class="footer-leadeboard">
+
+                </div>
+            </div>
+
+            <div class="popup-gameover">
+                <img src="gameover.png" class="img-gameover" width="400" alt="">
+                <div class="healt-kosong">Mode : <span class="text-mode"></span></div>
+                <div class="col-score-gameover">
+                    <div class="score-number-gameover"></div>
+                    <div class="score-text-gameover">SCORE</div>
+                </div>
+                <div class="back-to-menu"><img class="cursor" src="cursor.png" width="20" alt=""> Back to menu</div>
+                <div class="retry"> <img class="cursor" src="cursor.png" width="20" alt=""> Retry</div>
+                <img class="anjing" src="Z3uw.gif" alt="">
+
+            </div>
+
+
+            <div class="popup-screen">
+                <div class="col-sound">
+                    <div class="line-sound"></div>
+                    <img src="sound.png" width="60" class="sound" alt="">
+                </div>
+                <label for="input-name" class="col-input-name">
+                    <input name="input-name" id="input-name"  placeholder="Name...." maxlength="7" type="text" autofocus autocomplete="off">
+                </label>
+                <div class="col-input-mode">
+                    <select class="select-mode" name="" id="">
+                        <option value="easy">Easy</option>
+                        <option value="medium">Medium</option>
+                        <option value="hard">Hard</option>
+                    </select>
+                </div>
+                <div class="col-input-leadeboard">
+                    <div>Leadeboard</div>
+                </div>
+                <div class="col-input-play">
+                    <div>Play</div>
+                </div>
+                <img class="logo" src="logo.png" width="300" alt="" draggable="false">
+                <img class="papan" src="papan.png" alt="" draggable="false">
+                <img class="anjing" src="Z3uw.gif" alt="">
+                <img class="duck" src="duck.gif" alt="">
+            </div>
+            <div class="col-healt">
+                <div class="col-healt-img">
+                    <img src="healt.png" width="20" alt="">
+                    <img src="healt.png" width="20" alt="">
+                    <img src="healt.png" width="20" alt="">
+
+                </div>
+                <div class="healt">Health</div>
+            </div>
+            <div class="col-name">
+                <div class="col-player">Player : <span class="player">Bintang</span></div>
+                <div class="col-difficulty">Difficulty : <span class="difficulty">Hard</span></div>
+            </div>
+            <div class="col-score">
+                <div class="score-number">0000000000</div>
+                <div class="text-score">SCORE</div>
+            </div>
+            <canvas></canvas>
+
+        </div>
+    </div>
+    <audio src="game-music-loop-1-143979.mp3" class="audio-utama" loop></audio>
+    <audio src="game-over-39-199830.mp3" class="audio-gameover"></audio>
+    <audio src="videoplayback_2.m4a" class="audio-hit"></audio>
+    <script src="app.js"></script>
+</body>
+
+</html>
